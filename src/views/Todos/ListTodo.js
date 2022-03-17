@@ -2,7 +2,7 @@ import React from "react";
 import { toast } from "react-toastify";
 import AddTodo from "./AddTodo";
 import "./ListTodo.scss";
-
+import Color from "../HOC/Color";
 class ListTodo extends React.Component {
   state = {
     listTodos: [
@@ -75,7 +75,7 @@ class ListTodo extends React.Component {
               listTodos.map((item, index) => {
                 return (
                   <div className="todo-child" key={item.id}>
-                    {isEmtyObj == true ? (
+                    {isEmtyObj ? (
                       <span>
                         {index + 1} - {item.title}{" "}
                       </span>
@@ -120,4 +120,4 @@ class ListTodo extends React.Component {
     );
   }
 }
-export default ListTodo;
+export default Color(ListTodo);
