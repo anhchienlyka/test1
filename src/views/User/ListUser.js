@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-import DetailUser from "./DetailUser";
 import {withRouter} from "react-router-dom"
 
 class ListUser extends React.Component {
