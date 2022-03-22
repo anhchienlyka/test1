@@ -31,22 +31,18 @@ class DetailUser extends React.Component {
   //   });
   // };
 
-
-
-
-
   handlePreviously = (back) => {
     this.props.history.push(`/user/${back + 1}`);
   };
   render() {
-    let detailUser = this.state;
+    let {detailUser} = this.state;
     let isEmtyObj = Object.keys(detailUser).length === 0;
     return (
       <>
         <>
         {isEmtyObj === false && (
           <>
-            <div>Hello {detailUser.first_name}</div>
+            <div>Hello  {detailUser.first_name}</div>
 
             <div>Hello {detailUser.email}</div>
             <div>
