@@ -1,0 +1,12 @@
+﻿@model IEnumerable<PostResponse>
+
+<ol class="list-group list-group-numbered">
+    @foreach (var post in Model)
+    {
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <a class="ms-2 me-auto" asp-controller="Post" asp-action="Detail" asp-route-slug="@post.UrlSlug">
+                <div class="fw-bold">@post.Title</div>
+            </a>
+        </li>
+    }
+</ol>

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="5.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="5.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FA.JustBlog.Core\FA.JustBlog.Core.csproj" />
+    <ProjectReference Include="..\FA.JustBlog.Data\FA.JustBlog.Data.csproj" />
+  </ItemGroup>
+</Project>

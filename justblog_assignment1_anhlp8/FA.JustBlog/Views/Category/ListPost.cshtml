@@ -1,0 +1,9 @@
+﻿@model CategoryListPostViewModel
+
+@{
+    ViewData["Title"] = "Category";
+}
+
+<h1>Category/@Model.Category.Name</h1>
+<p class="fst-italic">@Model.Category.Description</p>
+<partial name="_ListPostPartial" model="@Model.PostsOfCategory" />

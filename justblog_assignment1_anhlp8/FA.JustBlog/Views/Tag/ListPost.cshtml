@@ -1,0 +1,9 @@
+﻿@model TagListPostViewModel
+
+@{
+    ViewData["Title"] = "Tag";
+}
+
+<h1>Tag/@Model.Tag.Name with @Model.Tag.Count view(s)</h1>
+<p class="fst-italic">@Model.Tag.Description</p>
+<partial name="_ListPostPartial" model="@Model.PostsOfTag" />

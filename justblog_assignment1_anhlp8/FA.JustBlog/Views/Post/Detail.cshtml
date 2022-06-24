@@ -1,0 +1,69 @@
+﻿@model PostResponse
+@inject ITagService service
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <!-- Post content-->
+            <article>
+                <!-- Post header-->
+                <header class="mb-4">
+                    <!-- Post title-->
+                    <h1 class="fw-bolder mb-1">@Model.Title</h1>
+                    <!-- Post meta content-->
+                    <div class="text-muted fst-italic mb-2">
+                        Posted on <span class="moment-time">@Model.PostedOn</span>
+                        rate @Model.Rate with @Model.ViewCount view(s)
+                    </div>
+                    <!-- Post categories-->
+                    <p class="fst-italic">Category: <a class="" asp-controller="Category" asp-action="ListPost" asp-route-categoryId="@Model.Category.Id">@Model.Category.Name</a></p>
+                    <!-- Post tags-->
+                    <p class="fst-italic">
+                        Tags:
+                        @{
+                            var count = 0;
+                            foreach (var tag in Model.Tags)
+                            {
+                                <a class="" asp-controller="Tag" asp-action="ListPost" asp-route-tagId="@tag.Id">@tag.Name</a>
+                                if (count++ < Model.Tags.Count - 1)
+                                {
+                                    <span>, </span>
+                                }
+                            }
+                        }
+                    </p>
+                </header>
+                <!-- Preview image figure-->
+                <!-- Post content-->
+                <section class="mb-5">
+                    @Html.Raw(@Model.PostContent)
+                </section>
+            </article>
+            <section class="mb-5">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <!-- Comment form-->
+                        <form class="mb-4" id="addCommentForm">
+                            <input name="PostId" id="PostId" value="@Model.Id" hidden />
+                            <input class="form-control" type="text" name="CommentHeader" id="CommentHeader" placeholder="Header" />
+                            <textarea name="CommentText" id="CommentText" class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea>
+                            <button type="submit" class="btn btn-secondary">Submit</button>
+                        </form>
+                        <!-- Single comment-->
+                        <div id="commentContainer">
+                            @foreach (var comment in Model.Comments.OrderByDescending(c => c.CommandTime))
+                            {
+                                <div class="d-flex">
+                                    <div class="ms-3">
+                                        <div class="fw-bold">@comment.Name at @comment.CommandTime</div>
+                                        @comment.CommentText
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+﻿@inject ITagService tagService
+
+<div class="d-flex flex-wrap justify-content-between">
+    @foreach (var tag in tagService.GetPopularTags()?.Items)
+    {
+        <a class="pe-3" asp-controller="Tag" asp-action="ListPost" asp-route-tagId="@tag.Id">
+            @tag.Name
+        </a>
+    }
+</div>
