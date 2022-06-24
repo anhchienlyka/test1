@@ -1,0 +1,55 @@
+﻿@model CreatePostViewModel
+@inject ICategoryService categoryService
+@{
+    ViewData["Title"] = "Create new post";
+    var categories = categoryService.GetCategories();
+}
+<form method="post">
+    @Html.HiddenFor(p => p.Id)
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" onkeyup="ChangeUrl('Title', 'UrlSlug')">
+        <span class="text-danger" asp-validation-for="Title"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="UrlSlug"></label>
+        <input asp-for="UrlSlug" class="form-control" readonly>
+        <span class="text-danger" asp-validation-for="UrlSlug"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ShortDescription"></label>
+        <textarea asp-for="ShortDescription" class="form-control"></textarea>
+        <span class="text-danger" asp-validation-for="ShortDescription"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CategoryId">Category</label>
+        <select class="form-control" asp-for="CategoryId" asp-items="@(new SelectList(categories, "Id", "Name"))">
+        </select>
+        <span class="text-danger" asp-validation-for="CategoryId"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TagNames"></label>
+        <input asp-for="TagNames" class="form-control">
+        <span class="text-danger" asp-validation-for="TagNames"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PostContent"></label>
+        <textarea class="form-control" asp-for="PostContent" rows="3"></textarea>
+        <span class="text-danger" asp-validation-for="PostContent"></span>
+    </div>
+    <div class="container">
+        <button type="submit" class="btn btn-primary mx-auto">Submit</button>
+    </div>
+</form>
+
+@section scripts{
+    <script src="~/lib/ckeditor/ckeditor.js"></script>
+    <script src="~/lib/ckeditor/adapters/jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#PostContent").ckeditor();
+        });
+    </script>
+}

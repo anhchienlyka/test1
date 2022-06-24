@@ -1,0 +1,39 @@
+﻿@model IEnumerable<TagResponse>
+@{
+    ViewData["Title"] = "Tag";
+}
+<div class="table-responsive">
+    <table class="table table-striped table-sm">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Posted On</th>
+                <th>Modified On</th>
+                <th>Count</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tag in Model)
+            {
+                <tr>
+                    <td>@tag.Id</td>
+                    <td>@tag.Name</td>
+                    <td>@tag.Description</td>
+                    <td>@tag.PostedOn</td>
+                    <td>@tag.Count</td>
+                    <td>@tag.Modified</td>
+                    <td>
+                        <div class="btn-group">
+                            <a class="btn-danger btn btn-sm" asp-area="Admin" asp-controller="Tag" asp-action="Delete" asp-route-id="@tag.Id">Delete</a>
+                            <a class="btn-success btn btn-sm" asp-area="Admin" asp-controller="Tag" asp-action="Edit" asp-route-id="@tag.Id">Edit</a>
+                            <a class="btn-primary btn btn-sm" asp-area="Admin" asp-controller="Tag" asp-action="ListPost" asp-route-tagId="@tag.Id">List Posts</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

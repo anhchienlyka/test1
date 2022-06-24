@@ -1,0 +1,60 @@
+﻿@inject IUserService userService
+@{
+    var keyword = ViewData["filter"] as string;
+    var searchBy = ViewData["searchBy"];
+    var orderBy = ViewData["orderBy"];
+    var isAsc = ViewData["isAsc"];
+    var roleName = ViewData["roleName"] as string;
+    var roles = userService.GetRoles();
+}
+<div class="input-group mb-3">
+    <input type="text" class="form-control" value="@keyword" name="keyword" placeholder="Search ...">
+    <select class="form-control" name="searchBy">
+        @foreach (var searchByEnum in Enum.GetValues<UserSearchBy>())
+        {
+            if (searchByEnum == (UserSearchBy)searchBy)
+            {
+                <option value="@searchByEnum" selected>Find By @searchByEnum.GetDisplayName()</option>
+            }
+            else
+            {
+                <option value="@searchByEnum">Find By @searchByEnum.GetDisplayName()</option>
+            }
+        }
+    </select>
+    <select class="form-control" name="orderBy">
+        @foreach (var orderByEnum in Enum.GetValues<UserOrderBy>())
+        {
+            if (orderByEnum == (UserOrderBy)orderBy)
+            {
+                <option value="@orderByEnum" selected>Order By @orderByEnum.GetDisplayName()</option>
+            }
+            else
+            {
+                <option value="@orderByEnum">Order By @orderByEnum.GetDisplayName()</option>
+            }
+        }
+    </select>
+    <select class="form-control" name="roleName">
+        @if (string.IsNullOrEmpty(roleName))
+        {
+            <option value="" selected>All</option>
+        }
+        @if (!string.IsNullOrEmpty(roleName))
+        {
+            <option value="">All</option>
+        }
+        @foreach (IdentityRole role in roles)
+        {
+            @if (roleName.Equals(role.Name))
+            {
+                <option value="@role.Name" selected>@role.Name</option>
+            }
+            @if (!roleName.Equals(role.Name))
+            {
+                <option value="@role.Name">@role.Name</option>
+            }
+        }
+    </select>
+    <button type="submit" class="btn btn-success">Search</button>
+</div>

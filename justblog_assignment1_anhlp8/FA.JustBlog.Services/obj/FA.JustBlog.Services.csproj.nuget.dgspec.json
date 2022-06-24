@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Fsoft\\Fresher_.NET\\AspNetCore\\justblog_assignment1_anhlp8\\FA.JustBlog.Services\\FA.JustBlog.Services.csproj": {}
+    "D:\\GIT\\FSOFT\\HN21_FR_.NET_03\\justblog_assignment1_anhlp8\\FA.JustBlog.Services\\FA.JustBlog.Services.csproj": {}
   },
   "projects": {
-    "D:\\Fsoft\\Fresher_.NET\\AspNetCore\\justblog_assignment1_anhlp8\\FA.JustBlog.Core\\FA.JustBlog.Core.csproj": {
+    "D:\\GIT\\FSOFT\\HN21_FR_.NET_03\\justblog_assignment1_anhlp8\\FA.JustBlog.Core\\FA.JustBlog.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Fsoft\\Fresher_.NET\\AspNetCore\\justblog_assignment1_anhlp8\\FA.JustBlog.Core\\FA.JustBlog.Core.csproj",
+        "projectUniqueName": "D:\\GIT\\FSOFT\\HN21_FR_.NET_03\\justblog_assignment1_anhlp8\\FA.JustBlog.Core\\FA.JustBlog.Core.csproj",
         "projectName": "FA.JustBlog.Core",
-        "projectPath": "D:\\Fsoft\\Fresher_.NET\\AspNetCore\\justblog_assignment1_anhlp8\\FA.JustBlog.Core\\FA.JustBlog.Core.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\Fsoft\\Fresher_.NET\\AspNetCore\\justblog_assignment1_anhlp8\\FA.JustBlog.Core\\obj\\",
+        "projectPath": "D:\\GIT\\FSOFT\\HN21_FR_.NET_03\\justblog_assignment1_anhlp8\\FA.JustBlog.Core\\FA.JustBlog.Core.csproj",
+        "packagesPath": "C:\\Users\\chien\\.nuget\\packages\\",
+        "outputPath": "D:\\GIT\\FSOFT\\HN21_FR_.NET_03\\justblog_assignment1_anhlp8\\FA.JustBlog.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\chien\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -80,21 +80,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Fsoft\\Fresher_.NET\\AspNetCore\\justblog_assignment1_anhlp8\\FA.JustBlog.Data\\FA.JustBlog.Data.csproj": {
+    "D:\\GIT\\FSOFT\\HN21_FR_.NET_03\\justblog_assignment1_anhlp8\\FA.JustBlog.Data\\FA.JustBlog.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Fsoft\\Fresher_.NET\\AspNetCore\\justblog_assignment1_anhlp8\\FA.JustBlog.Data\\FA.JustBlog.Data.csproj",
+        "projectUniqueName": "D:\\GIT\\FSOFT\\HN21_FR_.NET_03\\justblog_assignment1_anhlp8\\FA.JustBlog.Data\\FA.JustBlog.Data.csproj",
         "projectName": "FA.JustBlog.Data",
-        "projectPath": "D:\\Fsoft\\Fresher_.NET\\AspNetCore\\justblog_assignment1_anhlp8\\FA.JustBlog.Data\\FA.JustBlog.Data.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\Fsoft\\Fresher_.NET\\AspNetCore\\justblog_assignment1_anhlp8\\FA.JustBlog.Data\\obj\\",
+        "projectPath": "D:\\GIT\\FSOFT\\HN21_FR_.NET_03\\justblog_assignment1_anhlp8\\FA.JustBlog.Data\\FA.JustBlog.Data.csproj",
+        "packagesPath": "C:\\Users\\chien\\.nuget\\packages\\",
+        "outputPath": "D:\\GIT\\FSOFT\\HN21_FR_.NET_03\\justblog_assignment1_anhlp8\\FA.JustBlog.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\chien\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -108,8 +108,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Fsoft\\Fresher_.NET\\AspNetCore\\justblog_assignment1_anhlp8\\FA.JustBlog.Core\\FA.JustBlog.Core.csproj": {
-                "projectPath": "D:\\Fsoft\\Fresher_.NET\\AspNetCore\\justblog_assignment1_anhlp8\\FA.JustBlog.Core\\FA.JustBlog.Core.csproj"
+              "D:\\GIT\\FSOFT\\HN21_FR_.NET_03\\justblog_assignment1_anhlp8\\FA.JustBlog.Core\\FA.JustBlog.Core.csproj": {
+                "projectPath": "D:\\GIT\\FSOFT\\HN21_FR_.NET_03\\justblog_assignment1_anhlp8\\FA.JustBlog.Core\\FA.JustBlog.Core.csproj"
               }
             }
           }
@@ -154,21 +154,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Fsoft\\Fresher_.NET\\AspNetCore\\justblog_assignment1_anhlp8\\FA.JustBlog.Services\\FA.JustBlog.Services.csproj": {
+    "D:\\GIT\\FSOFT\\HN21_FR_.NET_03\\justblog_assignment1_anhlp8\\FA.JustBlog.Services\\FA.JustBlog.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Fsoft\\Fresher_.NET\\AspNetCore\\justblog_assignment1_anhlp8\\FA.JustBlog.Services\\FA.JustBlog.Services.csproj",
+        "projectUniqueName": "D:\\GIT\\FSOFT\\HN21_FR_.NET_03\\justblog_assignment1_anhlp8\\FA.JustBlog.Services\\FA.JustBlog.Services.csproj",
         "projectName": "FA.JustBlog.Services",
-        "projectPath": "D:\\Fsoft\\Fresher_.NET\\AspNetCore\\justblog_assignment1_anhlp8\\FA.JustBlog.Services\\FA.JustBlog.Services.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\Fsoft\\Fresher_.NET\\AspNetCore\\justblog_assignment1_anhlp8\\FA.JustBlog.Services\\obj\\",
+        "projectPath": "D:\\GIT\\FSOFT\\HN21_FR_.NET_03\\justblog_assignment1_anhlp8\\FA.JustBlog.Services\\FA.JustBlog.Services.csproj",
+        "packagesPath": "C:\\Users\\chien\\.nuget\\packages\\",
+        "outputPath": "D:\\GIT\\FSOFT\\HN21_FR_.NET_03\\justblog_assignment1_anhlp8\\FA.JustBlog.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\chien\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -182,11 +182,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Fsoft\\Fresher_.NET\\AspNetCore\\justblog_assignment1_anhlp8\\FA.JustBlog.Core\\FA.JustBlog.Core.csproj": {
-                "projectPath": "D:\\Fsoft\\Fresher_.NET\\AspNetCore\\justblog_assignment1_anhlp8\\FA.JustBlog.Core\\FA.JustBlog.Core.csproj"
+              "D:\\GIT\\FSOFT\\HN21_FR_.NET_03\\justblog_assignment1_anhlp8\\FA.JustBlog.Core\\FA.JustBlog.Core.csproj": {
+                "projectPath": "D:\\GIT\\FSOFT\\HN21_FR_.NET_03\\justblog_assignment1_anhlp8\\FA.JustBlog.Core\\FA.JustBlog.Core.csproj"
               },
-              "D:\\Fsoft\\Fresher_.NET\\AspNetCore\\justblog_assignment1_anhlp8\\FA.JustBlog.Data\\FA.JustBlog.Data.csproj": {
-                "projectPath": "D:\\Fsoft\\Fresher_.NET\\AspNetCore\\justblog_assignment1_anhlp8\\FA.JustBlog.Data\\FA.JustBlog.Data.csproj"
+              "D:\\GIT\\FSOFT\\HN21_FR_.NET_03\\justblog_assignment1_anhlp8\\FA.JustBlog.Data\\FA.JustBlog.Data.csproj": {
+                "projectPath": "D:\\GIT\\FSOFT\\HN21_FR_.NET_03\\justblog_assignment1_anhlp8\\FA.JustBlog.Data\\FA.JustBlog.Data.csproj"
               }
             }
           }
@@ -229,7 +229,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }

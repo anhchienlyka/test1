@@ -1,0 +1,10 @@
+﻿@model PagingResult<UserViewModel>
+
+@{
+    ViewData["Title"] = "Account";
+
+}
+<form method="get">
+    <partial name="_UserFilterPartial" />
+</form>
+<partial name="_ListUserPartial" model="@Model" />

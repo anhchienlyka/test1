@@ -1,0 +1,59 @@
+﻿@model PagingResult<PostResponse>
+
+<div class="table-responsive">
+    <table class="table table-striped table-sm">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>PostedOn</th>
+                <th>Modifed</th>
+                <th>Published</th>
+                <th>ShortDescription</th>
+                <th>Action</th>
+                <th>Published</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var post in Model.Items)
+            {
+                <tr>
+                    <td>@post.Id</td>
+                    <td>@post.Title</td>
+                    <td>@post.PostedOn</td>
+                    <td>@post.Modified</td>
+                    <td>@post.Published</td>
+                    <td>@post.ShortDescription</td>
+                    <td>
+                        <div class="btn-group">
+                            <a class="btn-danger btn btn-sm" asp-area="Admin" asp-controller="DashboardPost" asp-action="Delete" asp-route-id="@post.Id">Delete</a>
+                            <a class="btn-success btn btn-sm" asp-area="Admin" asp-controller="DashboardPost" asp-action="Edit" asp-route-id="@post.Id">Edit</a>
+                            <a class="btn-primary btn btn-sm" asp-area="Admin" asp-controller="Comment" asp-action="Create" asp-route-postId="@post.Id">Add Comment</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="btn-group">
+                            @if (post.Published.HasValue && post.Published <= DateTime.UtcNow)
+                            {
+                                <a class="btn-danger btn btn-sm" asp-area="Admin" asp-controller="DashboardPost" asp-action="UnPublish" asp-route-postId="@post.Id">UnPublished</a>
+                            }
+                            else
+                            {
+                                <a class="btn-success btn btn-sm" asp-area="Admin" asp-controller="DashboardPost" asp-action="Publish" asp-route-postId="@post.Id">Publish</a>
+                            }
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="8" align="center">
+                    <div class="d-flex justify-content-center align-items-end">
+                        <pager pager-model="@Model"></pager>
+                    </div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
