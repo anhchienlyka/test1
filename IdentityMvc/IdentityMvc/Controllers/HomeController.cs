@@ -1,4 +1,5 @@
 ﻿using IdentityMvc.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -23,7 +24,14 @@ namespace IdentityMvc.Controllers
             return View();
         }
 
+        [Authorize] // Khi click gọi action Privacy thì yêu cầu login để authori
+
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult AccessDenied()
         {
             return View();
         }

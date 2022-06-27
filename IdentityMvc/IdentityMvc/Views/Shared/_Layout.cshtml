@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - IdentityMvc</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" crossorigin="anonymous" />
 </head>
 <body>
     <header>
@@ -23,16 +24,35 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-controller="User" asp-action="Index">User</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Roles" asp-action="Index">Roles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Access Checker</a>
+                            <div class="dropdown" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-controller="AccessChecker" asp-action="AllAccess">AllAccess</a>
+                                <a class="dropdown-item" asp-controller="AccessChecker" asp-action="AuthorizedAccess">AuthorizedAccess</a>
+                                <a class="dropdown-item" asp-controller="AccessChecker" asp-action="UserAccess">UserAccess</a>
+                                <a class="dropdown-item" asp-controller="AccessChecker" asp-action="AdminAccess">AdminAccess</a>
+                                <a class="dropdown-item" asp-controller="AccessChecker" asp-action="Admin_CreateAccess">Admin_CreateAccess</a>
+                                <a class="dropdown-item" asp-controller="AccessChecker" asp-action="Admin_Create_Edit_DeleteAccess">Admin_Create_Edit_DeleteAccess</a>
+                                <a class="dropdown-item" asp-controller="AccessChecker" asp-action="Adm_Create_Edit_DeleteAccess_SuperAdmin">Adm_Create_Edit_DeleteAccess_SuperAdmin</a>
+                            </div>
                         </li>
                     </ul>
-                    <partial name="_LoginPartialCustom" />
+                    <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            <partial name="_Notification" />
             @RenderBody()
         </main>
     </div>
