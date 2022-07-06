@@ -1,0 +1,24 @@
+CREATE PROCEDURE Pr_Get_Benefit(@option int)
+                    as
+                    begin
+                    if @option=1
+                    select DATEPART(DAY, CAST(o.OrderDate AS DATE))  as  'Label',o.TotalMoney as 'Turnover'from 
+					 Orders as o 
+                    where o.TransactStatusID= 3 AND MONTH(o.OrderDate) = MONTH(GETDATE()) 
+                    group by  CAST(o.OrderDate AS DATE)
+                   
+				     select DATEPART(MONTH, CAST(o.OrderDate AS DATE))  as  'Label',sum(o.TotalMoney)/COUNT(O.OrderID) as 'Turnover'from OrderDetails as od
+					join Orders as o On od.OrderId = o.OrderID
+					left join Products as p On p.ProductID = od.ProductID 
+                    where o.TransactStatusID= 3 AND YEAR(o.OrderDate) = YEAR(GETDATE()) 
+                    group by  DATEPART(MONTH, CAST(o.OrderDate AS DATE))
+				   
+				   if @option=2
+					select DATEPART(MONTH, CAST(o.CreateDate AS DATE))  as  'Label',sum(o.TotalCost) as 'Turnover', ( SUM(o.TotalCost) - SUM(p.PriceInput*od.Quantity)) as 'Profit' from OrderDetails as od
+					join Orders as o On od.OrderId = o.Id
+					left join Products as p On p.Id = od.ProductId 
+                    where o.TransacStatus= 3 AND MONTH(o.CreateDate) = MONTH(GETDATE()) 
+                    group by o.UserId, CAST(o.CreateDate AS DATE)
+                    end
+
+					go
