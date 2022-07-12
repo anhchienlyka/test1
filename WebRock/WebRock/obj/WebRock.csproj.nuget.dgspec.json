@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\LAN\\HOCTAP\\NET\\WebRock\\WebRock\\WebRock.csproj": {}
+    "F:\\LAN\\HOCTAP\\test1\\WebRock\\WebRock\\WebRock.csproj": {}
   },
   "projects": {
-    "D:\\LAN\\HOCTAP\\NET\\WebRock\\WebRock\\WebRock.csproj": {
+    "F:\\LAN\\HOCTAP\\test1\\WebRock\\WebRock\\WebRock.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LAN\\HOCTAP\\NET\\WebRock\\WebRock\\WebRock.csproj",
+        "projectUniqueName": "F:\\LAN\\HOCTAP\\test1\\WebRock\\WebRock\\WebRock.csproj",
         "projectName": "WebRock",
-        "projectPath": "D:\\LAN\\HOCTAP\\NET\\WebRock\\WebRock\\WebRock.csproj",
-        "packagesPath": "C:\\Users\\PCC\\.nuget\\packages\\",
-        "outputPath": "D:\\LAN\\HOCTAP\\NET\\WebRock\\WebRock\\obj\\",
+        "projectPath": "F:\\LAN\\HOCTAP\\test1\\WebRock\\WebRock\\WebRock.csproj",
+        "packagesPath": "C:\\Users\\chien\\.nuget\\packages\\",
+        "outputPath": "F:\\LAN\\HOCTAP\\test1\\WebRock\\WebRock\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PCC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\chien\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[5.0.17, )"
@@ -81,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.409\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }
