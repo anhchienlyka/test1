@@ -1,0 +1,86 @@
+version: '3.4'
+
+services:
+  catalogdb.v1:
+   container_name: catalogdb.v1
+   restart: always
+   ports:
+     - "2701:27017"
+   volumes:
+     - mongo_data:/data/db
+  basketdbv1:
+    container_name: basketdbv1
+    restart: always
+    ports:
+     - "6379:6379"
+  discountdb.v1:
+    container_name: discountdb.v1
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin1234
+      - POSTGRES_DB=DiscountDb
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgresv1_data:/var/lib/postgresql/data/
+  pgadmin.v1:
+    container_name: pgadmin.v1
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@aspnetrun.com
+      - PGADMIN_DEFAULT_PASSWORD=admin1234
+    restart: always
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadminv1_data:/root/.pgadmin
+  portainerv1:
+    container_name: portainerv1
+    restart: always
+    ports:
+      - "8080:8000"
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainerv1_data:/data
+  catalog.api.v1:
+    container_name: catalog.api.v1
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "DatabaseSettings:ConnectionString=mongodb://catalogdb.v1:27017"
+    depends_on:
+      - catalogdb.v1
+    ports:
+      - "8000:80"
+  basketv1.api:
+    container_name: basketv1.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "CacheSettings:ConnectionString=basketdbv1:6379"
+      - "GrpcSettings:DiscountUrl=http://discount.grpc"
+    depends_on:
+      - basketdbv1
+    ports:
+      - "8001:80"
+  discountv1.api:
+    container_name: discountv1.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "DatabaseSettings:ConnectionString=Server=discountdb.v1;Port=5432;Database=DiscountDb;User Id=admin;Password=admin1234;"
+    depends_on:
+      - discountdb.v1
+    ports:
+      - "8002:80"
+
+
+
+  discount.grpc:
+    container_name: discount.grpc
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "DatabaseSettings:ConnectionString=Server=discountdb.v1;Port=5432;Database=DiscountDb;User Id=admin;Password=admin1234;"
+    depends_on:
+      - discountdb.v1
+    ports:
+      - "8003:80"
+

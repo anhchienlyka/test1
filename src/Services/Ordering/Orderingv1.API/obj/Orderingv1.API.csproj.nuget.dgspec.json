@@ -1,0 +1,294 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Orderingv1.API\\Orderingv1.API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Ordering.Infrastructure\\Orderingv1.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Ordering.Infrastructure\\Orderingv1.Infrastructure.csproj",
+        "projectName": "Orderingv1.Infrastructure",
+        "projectPath": "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Ordering.Infrastructure\\Orderingv1.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\PCC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Ordering.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\PCC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Orderingv1.Application\\Orderingv1.Application.csproj": {
+                "projectPath": "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Orderingv1.Application\\Orderingv1.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.28.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Orderingv1.API\\Orderingv1.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Orderingv1.API\\Orderingv1.API.csproj",
+        "projectName": "Orderingv1.API",
+        "projectPath": "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Orderingv1.API\\Orderingv1.API.csproj",
+        "packagesPath": "C:\\Users\\PCC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Orderingv1.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\PCC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Ordering.Infrastructure\\Orderingv1.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Ordering.Infrastructure\\Orderingv1.Infrastructure.csproj"
+              },
+              "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Orderingv1.Application\\Orderingv1.Application.csproj": {
+                "projectPath": "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Orderingv1.Application\\Orderingv1.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Orderingv1.Application\\Orderingv1.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Orderingv1.Application\\Orderingv1.Application.csproj",
+        "projectName": "Orderingv1.Application",
+        "projectPath": "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Orderingv1.Application\\Orderingv1.Application.csproj",
+        "packagesPath": "C:\\Users\\PCC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Orderingv1.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\PCC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Orderingv1.Domain\\Orderingv1.Domain.csproj": {
+                "projectPath": "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Orderingv1.Domain\\Orderingv1.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.2.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.1.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Office.Interop.Excel": {
+              "target": "Package",
+              "version": "[15.0.4795.1001, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Orderingv1.Domain\\Orderingv1.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Orderingv1.Domain\\Orderingv1.Domain.csproj",
+        "projectName": "Orderingv1.Domain",
+        "projectPath": "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Orderingv1.Domain\\Orderingv1.Domain.csproj",
+        "packagesPath": "C:\\Users\\PCC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PCC\\source\\repos\\micorservice\\src\\Services\\Ordering\\Orderingv1.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\PCC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
